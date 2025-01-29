@@ -17,7 +17,7 @@ function renderTodos() {
         li.innerHTML = `
             <span>${todo}</span>
             <button onclick="editTodo(${index})">Edit</button>
-            <button onclick="deleteTodo"(${index})">Delete</button>
+            <button onclick="deleteTodo(${index})">Delete</button>
         `;
         todoList.appendChild(li);
     });
@@ -45,8 +45,7 @@ function editTodo(index) {
 
 // Function to delete a todo
 function deleteTodo(index) {
-    var con = confirm('Are you sure you want to delete this todo?')
-    if (con) {
+    if (confirm('Are you sure you want to delete this todo?')) {
         todos.splice(index, 1);
         renderTodos();
     }
