@@ -45,7 +45,8 @@ function editTodo(index) {
 
 // Function to delete a todo
 function deleteTodo(index) {
-    if (confirm('Are you sure you want to delete this todo?')) {
+    var con = confirm('Are you sure you want to delete this todo?')
+    if (con) {
         todos.splice(index, 1);
         renderTodos();
     }
